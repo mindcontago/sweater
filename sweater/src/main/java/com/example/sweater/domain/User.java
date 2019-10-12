@@ -13,10 +13,8 @@ public class User {
     private String password;
     private boolean active;
     //У пльзователей будет ролевая система - Админ, пользователь и привелег пользователь (модератор)
-    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)//автоматическая Доп таблица для хранения ЕНАМов
-    //КОгда мы заружаем пользователя, его роли хран-ся в отедльной таблице.
-    @CollectionTable(name="user_role", joinColumns = @JoinColumn(name="user_id"))//Будет хранится в отдельной таблице, для котор мы не
-    // опис mapping
+    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)//автоматическая Доп таблица для хранения ЕНАМов//КОгда мы заружаем пользователя, его роли хран-ся в отедльной таблице.
+    @CollectionTable(name="user_role", joinColumns = @JoinColumn(name="user_id"))//Будет хранится в отдельной таблице, для котор мы не // опис mapping
     @Enumerated(EnumType.STRING)
     private Set<Role> roles; //roles - its ENUM we created earlier
 

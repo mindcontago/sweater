@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Entity;
+
 
 @Entity //Если Энтити - дб конструктор без параметров!!!!!!!!!!!!!
 public class Message {

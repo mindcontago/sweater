@@ -8,7 +8,7 @@
     </div>
     <div> <!--подключаем базу -->
         <form method="post">
-            <input type="text" name="text" placeholder="Enter your message">
+            <input type="text" name="text" placeholder="Enter your message"/>
             <input type="text" name="tag" placeholder="add any tag">
             <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
             <button type="submit">Add your message!</button>
@@ -17,18 +17,18 @@
 
         </form>
     </div>
-<div>Список сообщений</div>
+    <div>Список сообщений</div>
     <form method="post" action="filter">
         <input type="text" name="filter">
         <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
         <button type="submit">Find by tag</button>
     </form>
-{{#messages}}
-    <div>
-        <b>{{id}}</b>
-        <span>{{text}}</span>
-        <i>{{tag}}</i>
-    </div>
-{{/messages}}
+    {{#messages}}
+        <div>
+            <b>{{id}}</b>
+            <span>{{text}}</span>
+            <i>{{tag}}</i>
+        </div>
+    {{/messages}}
 </body>
 </html>
